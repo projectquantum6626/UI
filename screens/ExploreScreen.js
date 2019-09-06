@@ -3,6 +3,7 @@ import { FlatList, ActivityIndicator, Button, Text, View, TextInput, Image, Plat
   ScrollView, StyleSheet, TouchableOpacity, Dimensions, } from 'react-native';
 import { primary } from '../assets/styles/stylesheet';
 import StockCard from '../components/StockCard';
+import MoverItem from '../components/MoverItem';
 import { SafeAreaView } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -26,7 +27,7 @@ export default class ExploreScr extends React.Component {
 }
 
   render() {
-    const moverData = [
+    const qData = [
       {
         id: 1,
         name: "TSLA",
@@ -96,22 +97,35 @@ export default class ExploreScr extends React.Component {
                       style={{ flex: 1, fontWeight: '100', backgroundColor: 'white' }}/>
           </View>                
         </View>
-        <ScrollView scrollEventThrottle={16}>
-            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20, 
-                  marginTop: 5, marginBottom: 20}}>Big Movers</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+        <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20, 
+              marginTop: 5, marginBottom: 10}}>Big Movers</Text>
+          <View style={{flex: 1} [primary.container]}>
+            <FlatList
+              marginHorizontal={15}
+              showsVerticalScrollIndicator={false}
+              data={qData}
+              key={qData.id}
+              renderItem={({ item }) =>
+                <MoverItem data={item} />
+              }
+              keyExtractor={(item) => item.id.toString()}/>
+          </View>
+          <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20, 
+                  marginTop: 15, marginBottom: 20}}>Q recommends</Text>
           <View style={{flex: 1} [primary.container]}>
             <FlatList
               marginHorizontal={15}
               horizontal={true}
               showsHorizontalScrollIndicator={false}
-              data={moverData}
-              key={moverData.id}
+              data={qData}
+              key={qData.id}
               renderItem={({ item }) =>
                 <StockCard data={item} />
               }
               keyExtractor={(item) => item.id.toString()}/>
           </View>
-        </ScrollView>
+      </ScrollView>
       </SafeAreaView>
     );
   }

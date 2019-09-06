@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { FlatList, ActivityIndicator, Button, Text, View, TextInput } from 'react-native';
 
 export default class AccountsScr extends React.Component{
   static navigationOptions = {

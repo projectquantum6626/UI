@@ -91,5 +91,22 @@ const card = StyleSheet.create({
     }
 });
 
+const list = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#f5f6fa',
+        padding: 0,
+        marginRight: 5,
+        marginLeft: 5,
+        marginBottom: 2,
+        borderWidth: 2,
+        borderColor: "#f5f6fa",
+        borderRadius: 3,
+        elevation: 2,
+        height: 60,
+    },
+});
 
-export { primary, card }
+
+export { primary, card, list}
