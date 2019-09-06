@@ -13,24 +13,17 @@ export default class Article extends React.Component {
 
   render() {
     const data = this.props.data;
-    const newsImage = require('../assets/images/sample-stock-2.jpg');
     return (
     <View style={card.articleContainer}>
-      {/*}
-      <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-        <View style={{flexDirection:'column'}}>
-          <Text>hello</Text>
-          <Text>hey</Text>
-        </View>
-        <Text>world</Text>
-      </View>
-      */}
       <View style={{flexDirection:'row',justifyContent:'space-between'}}>
         <View style={{flex: 7, flexDirection:'column', marginLeft: 5}}>
           <Text style={{ fontSize: 16, fontWeight: '600'}}>{data.title}</Text>
-          <Text style={{ fontSize: 14, fontWeight: '400'}}>{data.description}</Text>
+          <Text style={{ fontSize: 10, fontWeight: '400'}}>{data.source.name}</Text>
         </View>
-        <Image style={{flex: 2, width: 70, height: 70, resizeMode:'stretch', marginVertical:10, marginRight:10, borderRadius: 10}} source={newsImage}/>
+        <Image
+          source={{uri: data.urlToImage}}
+          style={{flex: 2, width: 70, height: 70,
+          marginVertical: 10, marginLeft: 5, marginRight: 10, borderRadius: 10}} />
       </View>
     </View>
     );

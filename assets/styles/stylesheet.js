@@ -65,7 +65,7 @@ const card = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 4,
         elevation: 2,
-        height: 100
+        height: 95
     },
     goingMarked: {
         backgroundColor: '#f5f6fa',

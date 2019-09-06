@@ -57,36 +57,36 @@ export default class HomeScr extends Component {
 
   render() {
     return ( 
-<View>
-<Text style={{ fontSize: 34, fontWeight: '700', paddingHorizontal: 20, 
-              marginTop: Platform.OS == 'android' ? 60 : 30}}>Latest News</Text>
+      <View>
+        <Text style={{ fontSize: 34, fontWeight: '700', paddingHorizontal: 20, 
+          marginTop: Platform.OS == 'android' ? 60 : 30}}>Latest News</Text>
         <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 0}}>
           <View style={{
-                  flexDirection: 'row', padding: 10,
-                  backgroundColor: 'white', marginHorizontal: 20,
-                  shadowOffset: { width: 0, height: 0 },
-                  shadowColor: 'black',
-                  shadowOpacity: 0.2,
-                  elevation: 1,
-                  marginTop: 15
-              }}>
-                  <Icon name="ios-search" size={15} style={{ marginRight: 10}} />
-                  <TextInput
-                      underlineColorAndroid="transparent"
-                      placeholder="Find a Stock..."
-                      placeholderTextColor="grey"
-                      style={{ flex: 1, fontWeight: '100', backgroundColor: 'white' }}/>
+            flexDirection: 'row', padding: 10,
+            backgroundColor: 'white', marginHorizontal: 20,
+            shadowOffset: { width: 0, height: 0 },
+            shadowColor: 'black',
+            shadowOpacity: 0.2,
+            elevation: 1,
+            marginTop: 15
+          }}>
+            <Icon name="ios-search" size={15} style={{ marginRight: 10}} />
+            <TextInput
+              underlineColorAndroid="transparent"
+              placeholder="Find a Stock..."
+              placeholderTextColor="grey"
+              style={{ flex: 1, fontWeight: '100', backgroundColor: 'white' }}/>
           </View>                
-</View>
-      <ScrollView scrollEventThrottle={16}>
-      {this.state.articles.map((news, i) => {
-        return (
-          <View key={i}>
-            <Article data={news}/>
-          </View>
-        );
-      })}
-      </ScrollView>
+        </View>
+        <ScrollView scrollEventThrottle={16}>
+          {this.state.articles.map((news, i) => {
+            return (
+              <View key={i}>
+                <Article data={news}/>
+              </View>
+            );
+          })}
+        </ScrollView>
       </View>
     );
   }
