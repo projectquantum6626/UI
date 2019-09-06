@@ -38,7 +38,7 @@ const card = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5
     },
-    container: {
+    stockContainer: {
         backgroundColor: '#f5f6fa',
         padding: 0,
         marginRight: 5,
@@ -52,6 +52,20 @@ const card = StyleSheet.create({
         elevation: 2,
         height: 190,
         width: 155
+    },
+    articleContainer: {
+        backgroundColor: '#f5f6fa',
+        padding: 0,
+        marginRight: 5,
+        marginLeft: 5,
+        marginTop: 0,
+        marginBottom: 10,
+        borderWidth: 1,
+        borderColor: "#f5f6fa",
+        borderRadius: 10,
+        borderWidth: 4,
+        elevation: 2,
+        height: 95
     },
     goingMarked: {
         backgroundColor: '#f5f6fa',
