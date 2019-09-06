@@ -27,8 +27,8 @@ export default class Article extends React.Component {
       */}
       <View style={{flexDirection:'row',justifyContent:'space-between'}}>
         <View style={{flex: 7, flexDirection:'column', marginLeft: 5}}>
-          <Text style={{ fontSize: 20, fontWeight: '600'}}>{data.name}</Text>
-          <Text style={{ fontSize: 14, fontWeight: '400'}}>{data.summary}</Text>
+          <Text style={{ fontSize: 16, fontWeight: '600'}}>{data.title}</Text>
+          <Text style={{ fontSize: 14, fontWeight: '400'}}>{data.description}</Text>
         </View>
         <Image style={{flex: 2, width: 70, height: 70, resizeMode:'stretch', marginVertical:10, marginRight:10, borderRadius: 10}} source={newsImage}/>
       </View>
