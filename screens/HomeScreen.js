@@ -68,14 +68,15 @@ export default class HomeScr extends Component {
             shadowColor: 'black',
             shadowOpacity: 0.2,
             elevation: 1,
-            marginTop: 15
+            marginTop: 15,
+            borderRadius: 10
           }}>
             <Icon name="ios-search" size={15} style={{ marginRight: 10}} />
             <TextInput
               underlineColorAndroid="transparent"
               placeholder="Find a Stock..."
               placeholderTextColor="grey"
-              style={{ flex: 1, fontWeight: '100', backgroundColor: 'white' }}/>
+              style={{ flex: 1, fontWeight: '100', backgroundColor: 'white'}}/>
           </View>                
         </View>
         <ScrollView scrollEventThrottle={16}>
