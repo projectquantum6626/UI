@@ -38,7 +38,7 @@ const card = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5
     },
-    container: {
+    stockContainer: {
         backgroundColor: '#f5f6fa',
         padding: 0,
         marginRight: 5,
@@ -53,7 +53,7 @@ const card = StyleSheet.create({
         height: 190,
         width: 155
     },
-    container2: {
+    articleContainer: {
         backgroundColor: '#f5f6fa',
         padding: 0,
         marginRight: 5,

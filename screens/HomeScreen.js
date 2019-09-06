@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, ActivityIndicator, Button, Text, View, TextInput, Image, Platform,
   ScrollView, StyleSheet, TouchableOpacity, Dimensions, } from 'react-native';
 import { primary } from '../assets/styles/stylesheet';
-import NewsArticle from '../components/NewsArticle';
+import Article from '../components/Article';
 import { SafeAreaView } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -71,7 +71,7 @@ export default class HomeScr extends Component {
               data={newsData}
               key={newsData.id}
               renderItem={({ item }) =>
-                <NewsArticle data={item} />
+                <Article data={item} />
               }
               keyExtractor={(item) => item.id.toString()}/>
           </View>

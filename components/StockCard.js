@@ -16,7 +16,7 @@ export default class StockCard extends React.Component {
     const data = this.props.data;
     const textColor = data.status;
     return (
-    <View style={card.container}>
+    <View style={card.stockContainer}>
         <View style={{flex: 1}}>
             <View style={{flex: 1}}>
                 <Text style={{ fontSize: 20, fontWeight: '600', paddingHorizontal: 0, 
