@@ -57,7 +57,7 @@ export default class HomeScr extends Component {
 
   render() {
     return ( 
-      <View>
+      <SafeAreaView>
         <Text style={{ fontSize: 34, fontWeight: '700', paddingHorizontal: 20, 
           marginTop: Platform.OS == 'android' ? 60 : 30}}>Latest News</Text>
         <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 0}}>
@@ -88,7 +88,7 @@ export default class HomeScr extends Component {
             );
           })}
         </ScrollView>
-      </View>
+      </SafeAreaView>
     );
   }
 }
